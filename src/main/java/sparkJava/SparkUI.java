@@ -20,14 +20,13 @@ import spark.template.velocity.VelocityTemplateEngine;
 import sparkJava.controller.IndexController;
 import sparkJava.controller.ResultController;
 
-public class HelloWorld {
+public class SparkUI {
 	public static void main(String[] args) {
 		SparkConf sparkConf = new SparkConf()
 				.setAppName("cosi132g1")
 				.setMaster("local[*]");
 		JavaSparkContext sparkContext = new JavaSparkContext(sparkConf);
 		
-		Spark.staticFiles.location("/");
 		
 		get("/", (req, res) -> IndexController.serveHomePage());
 		
@@ -36,7 +35,7 @@ public class HelloWorld {
 			String query = queryBody.split("=")[1];
 			query = query.replace("+", " ");
 			
-			return ResultController.serverResult(query);
+			return ResultController.serveResult(query);
 		});
 	}
 	

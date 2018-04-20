@@ -19,7 +19,7 @@ public class ResultController {
 		this.response = response;
 	}
 	
-	public static String serverResult(String query) {
+	public static String serveResult(String query) {
 		List<String> sample = new ArrayList<>();
 		sample.add("hello");
 		sample.add("world");
