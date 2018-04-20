@@ -1,0 +1,11 @@
+
+	<head>
+	<h4>Please input your query</h4>
+	</head>
+
+	<body class="form-group">
+		<form method="POST" action="/result" + $!query>
+			<input id = "query" type="text" class="form-control" name="query" value="$!query" id="query"><br>
+			<input type="submit" value="Submit">
+		</form>
+	</body>

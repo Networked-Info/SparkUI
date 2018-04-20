@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<h4> Result </h4>
+<form method="GET" action="/">
+	<input type="submit" value="Back to Home">
+</form>
+
+<div>
+	<table>
+		#foreach ($num in $list)
+			<tr>$num</tr>
+			<br>
+			<hr>
+		#end
+	</table>
+</div>
